@@ -7,8 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# @users = User.order(:id)
-# ['Mateus Bittencourt', 'Nathalia Saud', 'João Paulo', 'Fabio da Silva', 'Lucca Pereira'] .each_with_index do |name, i|
-#   @users[i].full_name = name
-#   @users[i].save
-# end
+@users = User.all
+
+@users.each do |user|
+  user.kind = 'student'
+  user.save
+end
